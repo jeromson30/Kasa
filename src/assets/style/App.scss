@@ -1,0 +1,92 @@
+.App {
+  width: 1440px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  width: 1240px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  font-size: calc(10px + 2vmin);
+  color: #FF6060;
+}
+
+.App-navigation {
+  position: relative;
+  left: calc(100% - 489px);
+  right: 0;
+  width: 300px;
+  font-size: 24px;
+  color: #000;
+}
+
+.App-navigation ul{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.App-navigation a{
+  color: #000;
+  text-decoration: none;
+}
+
+.App-navigation a:hover{
+  text-decoration: underline;
+}
+
+.App-banner {
+  width: 1240px;
+  height: 223px;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0,0,0,0.5);
+  background-blend-mode: color;
+  border-radius: 10px;
+  align-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.App-link {
+  color: #FF6060;
+}
+
+.App-copyright {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+}
+
+.App-card {
+  width: 340px;
+  height: 340px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  color: #FFF;
+}
+
+.App-Gallery {
+  width: 1240px;
+  display: grid;
+  grid-template-columns: 360px 360px 360px;
+  grid-gap: 30px;
+  box-sizing: border-box;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #F6F6F6;
+  border-radius: 10px;
+}
