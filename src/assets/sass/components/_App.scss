@@ -80,8 +80,10 @@
 
 .App-Gallery {
   width: 1240px;
+  height: 820px;
   display: grid;
   grid-template-columns: 360px 360px 360px;
+  grid-row: 2;
   grid-gap: 30px;
   box-sizing: border-box;
   margin-top: 40px;
@@ -89,4 +91,42 @@
   padding: 20px;
   background-color: #F6F6F6;
   border-radius: 10px;
+  overflow: hidden;
+}
+
+.App-Gallery a {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: #000;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 1240px;
+  height: 415px;
+  overflow: hidden;
+}
+
+.App-slide {
+  width: 100%;
+  height: 415px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+.App-slide.active {
+  opacity: 1;
+}
+
+.App-cardTitle {
+  position: inherit;
+  bottom:10px;
+  left:-40px;
 }

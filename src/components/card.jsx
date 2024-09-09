@@ -1,8 +1,16 @@
-function Card({title, picture}){
+import { Link } from "react-router-dom"
+
+function Card(props){
+    const title = props.title;
+    const picture = props.picture;
+    const logementId = props.id;
+
     return (
-        <figure className="App-card" style={{backgroundImage: `url(${picture})`}}>
-            <span>{title}</span>
-        </figure>
+        <Link to={{pathname:'/logement/' + logementId}} key={logementId}>
+            <figure className="App-card" style={{backgroundImage: `url(${picture})`, objectFit: 'contains'}}>
+                <span className="App-cardTitle">{title}</span>
+            </figure>
+        </Link>
     )
 }
 

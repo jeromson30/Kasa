@@ -1,6 +1,3 @@
-
-import '../assets/style/App.scss';
-
 function Logo() {
   return (
     <div className="logo-app">

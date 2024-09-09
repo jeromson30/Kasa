@@ -1,0 +1,201 @@
+.App {
+  width: 1440px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+.App-header {
+  width: 1240px;
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  font-size: calc(10px + 2vmin);
+  color: #FF6060;
+}
+
+.App-navigation {
+  position: relative;
+  left: calc(100% - 489px);
+  right: 0;
+  width: 300px;
+  font-size: 24px;
+  color: #000;
+}
+
+.App-navigation ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.App-navigation a {
+  color: #000;
+  text-decoration: none;
+}
+
+.App-navigation a:hover {
+  text-decoration: underline;
+}
+
+.App-banner {
+  width: 1240px;
+  height: 223px;
+  background-size: cover;
+  background-position: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  background-blend-mode: color;
+  border-radius: 10px;
+  align-content: center;
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.App-link {
+  color: #FF6060;
+}
+
+.App-copyright {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 34px;
+}
+
+.App-card {
+  width: 340px;
+  height: 340px;
+  background-color: #FF6060;
+  border-radius: 10px;
+  color: #FFF;
+}
+
+.App-Gallery {
+  width: 1240px;
+  height: 820px;
+  display: grid;
+  grid-template-columns: 360px 360px 360px;
+  grid-row: 2;
+  grid-gap: 30px;
+  box-sizing: border-box;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 20px;
+  background-color: #F6F6F6;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.App-Gallery a {
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow: #000;
+}
+
+.slideshow-container {
+  position: relative;
+  width: 1240px;
+  height: 415px;
+  overflow: hidden;
+}
+
+.App-slide {
+  width: 100%;
+  height: 415px;
+  position: absolute;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.5s ease;
+  border-radius: 20px;
+  opacity: 0;
+}
+
+.App-slide.active {
+  opacity: 1;
+}
+
+.App-cardTitle {
+  position: inherit;
+  bottom: 10px;
+  left: -40px;
+}
+
+.container {
+  width: 100%;
+  margin: 0 auto;
+  list-style: none;
+  padding: 0;
+}
+
+.slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  height: 40vh;
+}
+
+.slide span {
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 20px;
+  color: #FF6060;
+  background: rgba(141, 174, 224, 0.5);
+  text-align: center;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: black;
+  color: white;
+}
+
+li {
+  list-style: none;
+}
+
+/*# sourceMappingURL=main.css.map */
