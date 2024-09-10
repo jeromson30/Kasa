@@ -27,7 +27,6 @@ function Slideshow(props){
     return (
     <div className="slideshow-container">
         {Slides}
-
     </div>)
 }
 

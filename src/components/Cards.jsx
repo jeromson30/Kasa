@@ -7,8 +7,8 @@ function Card(props){
 
     return (
         <Link to={{pathname:'/logement/' + logementId}} key={logementId}>
-            <figure className="App-card" style={{backgroundImage: `url(${picture})`, objectFit: 'contains'}}>
-                <span className="App-cardTitle">{title}</span>
+            <figure className="App-card" style={{backgroundImage: `linear-gradient(0deg, rgba(0,17,24,0.35) 0%, rgba(255,255,255,0) 27%), url(${picture})`, objectFit: 'contains'}}>
+                <figcaption className="App-cardTitle">{title}</figcaption>
             </figure>
         </Link>
     )

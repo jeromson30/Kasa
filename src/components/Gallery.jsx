@@ -1,4 +1,4 @@
-import Card from './Card'
+import Card from './Cards'
 import dataLogements from '../logements.json'
 // import GetData from "../modules/getData";
 

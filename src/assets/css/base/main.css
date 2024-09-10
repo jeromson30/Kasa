@@ -53,11 +53,13 @@
   background-position: center;
   background-color: rgba(0, 0, 0, 0.5);
   background-blend-mode: color;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   align-content: center;
   font-size: 48px;
   font-weight: bold;
   color: #fff;
+  text-shadow: black -1px -1px, 0 5px 5px rgba(0, 0, 0, 0.2);
 }
 
 .App-link {
@@ -73,9 +75,19 @@
 .App-card {
   width: 340px;
   height: 340px;
+  box-sizing: border-box;
   background-color: #FF6060;
   border-radius: 10px;
   color: #FFF;
+}
+
+.App-cardTitle {
+  position: relative;
+  width: 50%;
+  padding-left: 15px;
+  text-align: left;
+  bottom: -270px;
+  overflow: hidden;
 }
 
 .App-Gallery {
@@ -123,12 +135,6 @@
 
 .App-slide.active {
   opacity: 1;
-}
-
-.App-cardTitle {
-  position: inherit;
-  bottom: 10px;
-  left: -40px;
 }
 
 .container {
