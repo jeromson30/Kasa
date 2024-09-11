@@ -1,24 +1,20 @@
 import { createBrowserRouter} from "react-router-dom";
-// import { useEffect, useLocation} from "react-hooks";
-
 import Logement from '../components/LogementP';
 import Header from '../components/Header';
-import Main from '../components/Main';
+import Home from '../components/Home';
+import About from '../components/About';
 import Footer from '../components/Footer';
 import RouteError from './routeError';
-
-
-// let curLoc = useLocation();
 
 const router = createBrowserRouter([
     {
       path: "/",
-      element:     <div className="App"><Header/><Main/><Footer/></div>,
+      element:     <div className="App"><Header/><Home/><Footer/></div>,
       errorElement: <div className="App"><Header/><RouteError /><Footer/></div>
     },
     {
       path: "/A-propos",
-      element:     <div className="App"><Header/><Footer/></div>,
+      element:     <div className="App"><Header/><About/><Footer/></div>,
       errorElement: <div className="App"><Header/><RouteError /><Footer/></div>
     },
     {
@@ -28,10 +24,5 @@ const router = createBrowserRouter([
       errorElement: <div className="App"><Header/><RouteError /><Footer/></div>
     },
   ]);
-
-  
-  // useEffect(() => {
-  //     document.title = 'Kasa :: Bienvenue'
-  // }, [curLoc])
   
 export default router

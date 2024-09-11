@@ -1,8 +1,10 @@
-import image from "../assets/images/section_slogan.webp";
 
-function Banner() {
+
+function Banner(props) {
+        const BannerText = props.BannerText;
+        const imageBG = props.imageBG;
     return (
-            <div style={{backgroundImage: `url(http://localhost:3000${image})`}} className="App-banner">Chez vous, partout et ailleurs</div>
+            <div style={{backgroundImage: `url(http://localhost:3000${imageBG})`}} className="App-banner">{BannerText}</div>
     )
   }
   
