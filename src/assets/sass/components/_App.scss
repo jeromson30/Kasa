@@ -141,6 +141,26 @@
   opacity: 1;
 }
 
+.App-slide-leftarrow {
+  cursor: pointer;
+  position: absolute;
+  top:calc(50% - 60px);
+  left:2%;
+  color: white;
+  background: none;
+  border: none;
+}
+
+.App-slide-rightarrow {
+  cursor: pointer;
+  position: absolute;
+  top:calc(50% - 60px);
+  right:2%;
+  color: white;
+  background: none;
+  border: none;
+}
+
 .App-collapse{
   position: relative;
   z-index: 2;
@@ -152,14 +172,20 @@
   color: white;
   box-sizing: border-box;
   margin-top: 20px;
+  padding-left: 10px;
 }
 
 .App-collapse-button{
+  position: absolute;
+  height:50px;
+  top:calc(50% - 25px);
+  right: 20px;
   background: none;
   border: none;
   color: white;
   cursor: pointer;
   transform: rotate(0deg);
+  transition: transform 300ms ease;
 }
 
 .collapse-active{
@@ -186,6 +212,42 @@
     height: auto;
     min-height: fit-content;
     transition: all 200ms ease-in;
+}
+.App-logement{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1240px;
+  text-align: left;
+}
+
+.App-logement-title{
+  color:#FF6060;
+  font-size: 36px;
+  margin-bottom: 0;
+}
+
+.App-logement-location {
+  color:black;
+  font-size: 15px;
+}
+
+.App-logement-tag {
+  background-color: #FF6060;
+  color:white;
+  border-radius: 10px;
+  padding: 5px 8px 5px 8px;
+  margin-right: 8px;
+}
+
+.App-logement-collapse {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.App-logement-collapse h3{
+  font-size: 18px;
 }
 
 

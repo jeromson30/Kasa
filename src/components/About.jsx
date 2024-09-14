@@ -11,7 +11,7 @@ function About() {
     return (
         <main>
             <Banner imageBG={image} />
-            <Collapse collapaseTitle='Fiabilité' collapseWidth='70%' collapseText={text}/>
+            <Collapse collapseTitle='Fiabilité' collapseWidth='70%' collapseText={text}/>
         </main>
     )
   }

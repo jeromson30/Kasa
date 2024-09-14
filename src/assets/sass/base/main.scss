@@ -1,5 +1,4 @@
 @import '../components/App';
-@import '../components/slider';
 
 body {
   margin: 0;
@@ -42,4 +41,14 @@ footer {
 
 li {
   list-style: none;
+}
+
+.sr-only {
+  border: 0;
+  height: 1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	white-space: nowrap;
 }
