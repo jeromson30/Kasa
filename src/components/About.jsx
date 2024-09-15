@@ -11,7 +11,12 @@ function About() {
     return (
         <main>
             <Banner imageBG={image} />
-            <Collapse collapseTitle='Fiabilité' collapseWidth='70%' collapseText={text}/>
+            <div style={{marginTop: '20px',display: 'flex', flexDirection: 'column', alignItems: 'center', justifyItems: 'center'}}>
+                <Collapse collapseTitle='Fiabilité' collapseWidth='70%' collapseText={text} collapseTitleSize='24px'/>
+                <Collapse collapseTitle='Respect' collapseWidth='70%' collapseText={text} collapseTitleSize='24px'/>
+                <Collapse collapseTitle='Service' collapseWidth='70%' collapseText={text} collapseTitleSize='24px'/>
+                <Collapse collapseTitle='Sécurité' collapseWidth='70%' collapseText={text} collapseTitleSize='24px'/>
+            </div>
         </main>
     )
   }

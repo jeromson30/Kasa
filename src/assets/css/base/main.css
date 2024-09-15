@@ -78,7 +78,6 @@
   box-sizing: border-box;
   background-color: #FF6060;
   border-radius: 10px;
-  color: #FFF;
   transition: transform 200ms;
 }
 .App-card:hover {
@@ -87,10 +86,14 @@
 
 .App-cardTitle {
   position: relative;
-  width: 50%;
-  padding-left: 15px;
+  display: block;
+  width: 60%;
+  margin-left: 15px;
   text-align: left;
   bottom: -270px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
   overflow: hidden;
 }
 
@@ -166,13 +169,15 @@
   z-index: 2;
   border-radius: 10px;
   line-height: 50px;
-  font-weight: "normal";
+  font-size: 24px;
+  font-weight: bold;
   height: 52px;
   background-color: #FF6060;
   color: white;
   box-sizing: border-box;
   margin-top: 20px;
   padding-left: 10px;
+  text-align: left;
 }
 
 .App-collapse-button {
@@ -204,6 +209,7 @@
   opacity: 0;
   transition: all 200ms ease-out;
   color: black;
+  text-align: left;
 }
 
 .open {
@@ -217,24 +223,55 @@
 .App-logement {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 1240px;
+  width: 1240px;
   text-align: left;
+  position: relative;
+}
+
+.App-logement-host {
+  width: 180px;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 500;
+}
+.App-logement-host > div {
+  width: 100%;
+  padding: 10px;
 }
 
 .App-logement-title {
   color: #FF6060;
   font-size: 36px;
+  font-weight: 500;
   margin-bottom: 0;
 }
 
 .App-logement-location {
   color: black;
-  font-size: 15px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+.App-logement-host img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .App-logement-tag {
   background-color: #FF6060;
+  font-weight: 700;
+  font-size: 14px;
   color: white;
   border-radius: 10px;
   padding: 5px 8px 5px 8px;
@@ -242,6 +279,7 @@
 }
 
 .App-logement-collapse {
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -251,9 +289,45 @@
   font-size: 18px;
 }
 
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../../fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   display: flex;
@@ -263,7 +337,7 @@ body {
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New", monospace;
+  font-family: "Montserrat", sans-serif;
 }
 
 main {

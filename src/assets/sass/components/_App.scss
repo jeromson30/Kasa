@@ -78,7 +78,6 @@
   box-sizing: border-box;
   background-color: #FF6060;
   border-radius: 10px;
-  color: #FFF;
   transition: transform 200ms;
   &:hover {
     transform: scale(1.1);
@@ -87,10 +86,14 @@
 
 .App-cardTitle {
   position: relative;
-  width: 50%;
-  padding-left: 15px;
+  display: block;
+  width: 60%;
+  margin-left: 15px;
   text-align: left;
   bottom:-270px;
+  color: #FFF;
+  font-size: 16px;
+  font-weight: 700;
   overflow: hidden;
 }
 
@@ -166,13 +169,15 @@
   z-index: 2;
   border-radius: 10px;
   line-height: 50px;
-  font-weight: 'normal';
+  font-size: 24px;
+  font-weight: bold;
   height: 52px;
   background-color: #FF6060;
   color: white;
   box-sizing: border-box;
   margin-top: 20px;
   padding-left: 10px;
+  text-align: left;
 }
 
 .App-collapse-button{
@@ -204,6 +209,7 @@
   opacity: 0;
   transition: all 200ms ease-out;
   color: black;
+  text-align: left;
 }
 
 .open {
@@ -216,24 +222,57 @@
 .App-logement{
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 1240px;
+  width: 1240px;
   text-align: left;
+  position: relative;
+}
+
+.App-logement-host {
+  width: 180px;
+  box-sizing: border-box;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  top: 20px;
+  right: 20px;
+  text-align: right;
+  color: #FF6060;
+  font-size: 18px;
+  font-weight: 500;
+  > div {
+    width: 100%;
+    padding: 10px;
+  }
 }
 
 .App-logement-title{
   color:#FF6060;
   font-size: 36px;
+  font-weight: 500;
   margin-bottom: 0;
 }
 
 .App-logement-location {
   color:black;
-  font-size: 15px;
+  font-size: 18px;
+  line-height: 26px;
+}
+
+
+
+.App-logement-host img {
+  width: 64px;
+  height: 64px;
+  object-fit: contain;
+  border-radius: 50%;
 }
 
 .App-logement-tag {
   background-color: #FF6060;
+  font-weight: 700;
+  font-size: 14px;
   color:white;
   border-radius: 10px;
   padding: 5px 8px 5px 8px;
@@ -241,6 +280,7 @@
 }
 
 .App-logement-collapse {
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;

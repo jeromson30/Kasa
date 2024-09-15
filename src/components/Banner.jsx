@@ -3,8 +3,9 @@
 function Banner(props) {
         const BannerText = props.BannerText;
         const imageBG = props.imageBG;
+        console.log(imageBG)
     return (
-            <div style={{backgroundImage: `url(http://localhost:3000${imageBG})`}} className="App-banner">{BannerText}</div>
+            <div style={{backgroundImage: `url(${imageBG})`}} className="App-banner">{BannerText}</div>
     )
   }
   
