@@ -4,7 +4,7 @@ import dataLogements from '../logements.json'
 
 function Gallery(){    
     return (
-        <section className="App-Gallery">
+        <section className="App-gallery">
                 {dataLogements.map(({title, cover, id}) => (
                     <Card title={title} picture={cover} id={id} key={id} />
                 ))          

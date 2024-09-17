@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import LeftArrow from '../assets/images/arrow_back_ios-24px 1.png'
-import RightArrow from '../assets/images/arrow_forward_ios-24px 1.png'
+import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faChevronLeft} from '@fortawesome/free-solid-svg-icons'
+import { faChevronRight} from '@fortawesome/free-solid-svg-icons'
 
 function Slideshow(props){
     const pictures = props.pictures
@@ -16,14 +17,24 @@ function Slideshow(props){
         setCurrentIndex(previousIndex);
     };
 
+    useEffect(() => {
+        if(window.innerWidth < 767){
+            
+            document.querySelectorAll('#arrow').forEach((item) => {
+                item.classList.remove("fa-6x")
+                item.classList.add("fa-2xl")
+            })
+        }
+      },[]);
+
     const Slides = pictures.map((pic, index) => 
             <div key={index} className={`App-slide ${index === currentIndex ? 'active' : ''}`} style={{ backgroundImage: `url(${pic})` }}>
                         <button className="App-slide-leftarrow" onClick={goToPreviousSlide}>
-                            <img src={LeftArrow} alt='Précedent'/>
+                            <FontAwesomeIcon id="arrow" icon={faChevronLeft} size='6x'/>
                             <span className='sr-only'>Previous</span>
-                            </button>
+                        </button>
                         <button className="App-slide-rightarrow" onClick={goToNextSlide}>
-                            <img src={RightArrow} alt='Suivant'/>
+                            <FontAwesomeIcon id="arrow" icon={faChevronRight} size='6x'/>
                             <span className='sr-only'>Next</span>
                         </button>
             </div>

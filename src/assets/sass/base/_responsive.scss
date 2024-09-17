@@ -1,0 +1,110 @@
+/****** Media queries ***********/
+/* Medium devices (tablets, less/equal than 1024px) */
+@media (max-width: 1024px) {
+    
+}
+
+/* Small devices (phones, less than 768px) */
+@media (max-width: 767px) {
+    body{
+        font-size: 14px;
+    }
+    .App {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .App-logo {
+        width: 140px;
+        height: 45px;
+        pointer-events: none;
+      }
+
+    .App-navigation {
+        position: absolute;
+        right: 40px;
+        width: 36%;
+        height: 50px;
+        text-align: right;
+        align-content: center;
+        font-size: 12px;
+        text-transform: uppercase;
+        & ul {
+            width: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    }
+
+    .App-card {
+        width: 100%;
+        margin: 0;
+        transition: none;
+        &:hover {
+          transform: none;
+        }
+    }
+
+    .App-gallery {
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        grid-template-columns: none;
+        grid-row: none;
+        padding: 0;
+        background-color: transparent;
+        & a {
+            width: 100%;
+        }
+    }
+
+    .App-banner {
+        font-size: 24px;
+        font-weight: 700;
+    }
+
+    header,
+    main,      
+    footer {
+        box-sizing: border-box;
+        padding: 20px;
+    }
+
+    .App-logement-host {
+        width: 100%;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+        position: initial;
+        font-size: 12px;
+    }
+
+    .App-logement-collapse {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .App-collapse-article {
+        width: 100% !important;
+    }
+
+    .App-slide-leftarrow {
+        top:calc(50% - 10px);
+    }
+      
+    .App-slide-rightarrow {
+        top:calc(50% - 10px);
+    }
+
+    .App-collapse-text {
+        font-size: 14px;
+    }
+
+    .App-logement-host-rating {
+        text-align: left;
+    }
+
+
+}

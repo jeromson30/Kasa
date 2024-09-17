@@ -1,0 +1,6 @@
+@mixin flexBox($direction: row, $justify : center, $align : center) { // Si aucune valeur n'est précisée alors $margin vaut 10px
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+    align-items: $align;
+  }

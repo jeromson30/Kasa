@@ -1,32 +1,46 @@
+
+
 .App {
-  width: 1440px;
-  background-color: #fff;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: $PrimWidth;
+  background-color: white;
+  @include flexBox(column);
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
+  width: 210px;
+  height: 68px;
   pointer-events: none;
 }
 
+.App-route-error {
+  color: $PrimColor;
+  font-size: 288px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.App-route-errortext{
+  color: $PrimColor;
+}
+
 .App-header {
-  width: 1240px;
-  padding: 20px;
+  width: $PrimWidth;
+  max-width: 1240px;
+  margin-top: 20px;
   display: flex;
   flex-direction: row;
-  font-size: calc(10px + 2vmin);
-  color: #FF6060;
+  font-size: 18px;
+  color: $PrimColor;
+  position: relative;
 }
 
 .App-navigation {
-  position: relative;
-  left: calc(100% - 489px);
+  position: absolute;
   right: 0;
-  width: 300px;
+  width: 23%;
+  text-align: right;
+  justify-content: right;
   font-size: 24px;
   color: #000;
 }
@@ -34,7 +48,7 @@
 .App-navigation ul{
   display: flex;
   flex-direction: row;
-  justify-content: space-evenly;
+  justify-content: space-between;
 }
 
 .App-navigation a{
@@ -47,8 +61,9 @@
 }
 
 .App-banner {
-  width: 1240px;
-  height: 223px;
+  width: $PrimWidth;
+  max-width: 1240px;
+  height: 18vh;
   background-size: cover;
   background-position: center;
   background-color: rgba(0,0,0,0.5);
@@ -63,7 +78,7 @@
 }
 
 .App-link {
-  color: #FF6060;
+  color: $PrimColor;
 }
 
 .App-copyright {
@@ -76,7 +91,7 @@
   width: 340px;
   height: 340px;
   box-sizing: border-box;
-  background-color: #FF6060;
+  background-color: $PrimColor;
   border-radius: 10px;
   transition: transform 200ms;
   &:hover {
@@ -97,8 +112,9 @@
   overflow: hidden;
 }
 
-.App-Gallery {
-  width: 1240px;
+.App-gallery {
+  width: $PrimWidth;
+  max-width: 1240px;
   height: 820px;
   display: grid;
   grid-template-columns: 360px 360px 360px;
@@ -113,8 +129,8 @@
   overflow: hidden;
 }
 
-.App-Gallery a {
-  width: 100%;
+.App-gallery a {
+  width: $PrimWidth;
   height: 100%;
   box-sizing: border-box;
   text-decoration: none;
@@ -124,13 +140,13 @@
 
 .slideshow-container {
   position: relative;
-  width: 1240px;
+  width: $PrimWidth;
   height: 415px;
   overflow: hidden;
 }
 
 .App-slide {
-  width: 100%;
+  width: $PrimWidth;
   height: 415px;
   position: absolute;
   background-size: cover;
@@ -222,7 +238,7 @@
 .App-logement{
   display: flex;
   flex-direction: column;
-  width: 1240px;
+  width: $PrimWidth;
   text-align: left;
   position: relative;
 }
@@ -231,24 +247,21 @@
   width: 180px;
   box-sizing: border-box;
   position: absolute;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-around;
+  @include flexBox(column,center,space-around);
   top: 20px;
   right: 20px;
   text-align: right;
-  color: #FF6060;
+  color: $PrimColor;
   font-size: 18px;
   font-weight: 500;
   > div {
-    width: 100%;
+    width: $PrimWidth;
     padding: 10px;
   }
 }
 
 .App-logement-title{
-  color:#FF6060;
+  color:$PrimColor;
   font-size: 36px;
   font-weight: 500;
   margin-bottom: 0;
@@ -260,8 +273,6 @@
   line-height: 26px;
 }
 
-
-
 .App-logement-host img {
   width: 64px;
   height: 64px;
@@ -270,7 +281,7 @@
 }
 
 .App-logement-tag {
-  background-color: #FF6060;
+  background-color: $PrimColor;
   font-weight: 700;
   font-size: 14px;
   color:white;
