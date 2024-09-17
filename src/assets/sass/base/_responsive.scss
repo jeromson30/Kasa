@@ -1,8 +1,4 @@
 /****** Media queries ***********/
-/* Medium devices (tablets, less/equal than 1024px) */
-@media (max-width: 1024px) {
-    
-}
 
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767px) {
@@ -10,7 +6,7 @@
         font-size: 14px;
     }
     .App {
-        width: 100%;
+        width: $PrimWidth;
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -31,14 +27,14 @@
         font-size: 12px;
         text-transform: uppercase;
         & ul {
-            width: 100%;
+            width:  $PrimWidth;
             margin: 0;
             padding: 0;
         }
     }
 
     .App-card {
-        width: 100%;
+        width:  $PrimWidth;
         margin: 0;
         transition: none;
         &:hover {
@@ -57,7 +53,7 @@
         padding: 0;
         background-color: transparent;
         & a {
-            width: 100%;
+            width:  $PrimWidth;
         }
     }
 
@@ -74,7 +70,7 @@
     }
 
     .App-logement-host {
-        width: 100%;
+        width:  $PrimWidth;
         flex-direction: row-reverse;
         justify-content: space-between;
         position: initial;
@@ -82,12 +78,12 @@
     }
 
     .App-logement-collapse {
-        width: 100%;
+        width:  $PrimWidth;
         flex-direction: column;
     }
 
     .App-collapse-article {
-        width: 100% !important;
+        width: $PrimWidth !important;
     }
 
     .App-slide-leftarrow {
