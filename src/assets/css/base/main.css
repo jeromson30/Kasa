@@ -488,6 +488,7 @@ li {
     font-size: 14px;
   }
   .App-logement-host-rating {
+    align-content: center;
     text-align: left;
   }
 }
