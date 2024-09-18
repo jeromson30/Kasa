@@ -40,9 +40,14 @@
   justify-content: space-between;
 }
 
-.App-navigation a{
+.App-link-home, .App-link-about{
   color: #000;
   text-decoration: none;
+}
+
+.App-link-active {
+  font-weight: bold;
+  text-decoration: underline;
 }
 
 .App-navigation a:hover{

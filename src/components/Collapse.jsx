@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
+import PropTypes from 'prop-types'
 
 function Collapse(props) {
     const collapseWidth = props.collapseWidth
@@ -23,5 +24,13 @@ function Collapse(props) {
             </article>
     )
   }
+
+Collapse.propTypes = {
+    collapseWidth: PropTypes.string,
+    collapseText: PropTypes.string,
+    collapseTitle: PropTypes.string,
+    collapseTitleSize: PropTypes.string,
+    IsList: PropTypes.bool
+}
   
   export default Collapse

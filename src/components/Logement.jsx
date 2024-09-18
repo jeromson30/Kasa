@@ -3,6 +3,7 @@ import Slideshow from './Slideshow'
 import Collapse from './Collapse'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import PropTypes from 'prop-types'
 
 function Logement(props) {
     let tags
@@ -61,4 +62,9 @@ function Logement(props) {
     )
   }
   
+
+Logement.propTypes = {
+    data: PropTypes.object
+}
+
   export default Logement

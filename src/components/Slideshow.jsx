@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft} from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight} from '@fortawesome/free-solid-svg-icons'
+import PropTypes from 'prop-types'
 
 function Slideshow(props){
     const pictures = props.pictures
@@ -44,6 +45,10 @@ function Slideshow(props){
     <div className="slideshow-container">
         {Slides}
     </div>)
+}
+
+Slideshow.propTypes = {
+    pictures: PropTypes.string
 }
 
 export default Slideshow

@@ -5,8 +5,7 @@ import RouteError from "../modules/routeError";
 
 
 function PageError() {
-  
-
+    
     return (
         <div className="App">
             <Header/>
