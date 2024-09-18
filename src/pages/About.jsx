@@ -1,6 +1,6 @@
-import Banner from "./Banner";
+import Banner from "../components/Banner";
 import image from "../assets/images/banner_about.webp";
-import Collapse from "./Collapse";
+import Collapse from "../components/Collapse";
 import { useEffect } from 'react';
 
 function About() {

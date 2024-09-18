@@ -1,5 +1,5 @@
-import Banner from "./Banner";
-import Gallery from "./Gallery";
+import Banner from "../components/Banner";
+import Gallery from "../components/Gallery";
 import image from "../assets/images/banner_slogan.webp";
 import { useEffect } from 'react';
 

@@ -109,17 +109,6 @@ li {
   pointer-events: none;
 }
 
-.App-route-error {
-  color: #FF6060;
-  font-size: 288px;
-  font-weight: 700;
-  margin: 0;
-}
-
-.App-route-errortext {
-  color: #FF6060;
-}
-
 .App-header {
   width: 100%;
   max-width: 1240px;
@@ -401,6 +390,30 @@ li {
   font-size: 18px;
 }
 
+.App-pageerror-error {
+  color: #FF6060;
+  font-size: 288px;
+  font-weight: 700;
+  margin: 0;
+}
+
+.App-pageerror-errortext {
+  color: #FF6060;
+  padding-bottom: 40px;
+}
+
+.App-pageerror-container {
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: normal;
+  align-items: center;
+}
+
+.App-pageerror-link {
+  color: black;
+}
+
 /****** Media queries ***********/
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767px) {
@@ -490,6 +503,15 @@ li {
   .App-logement-host-rating {
     align-content: center;
     text-align: left;
+  }
+  .App-pageerror-error {
+    color: #FF6060;
+    font-size: 96px;
+    font-weight: 700;
+    margin: 0;
+  }
+  .App-copyright {
+    font-size: 12px;
   }
 }
 

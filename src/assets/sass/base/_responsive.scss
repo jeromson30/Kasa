@@ -103,5 +103,15 @@
         text-align: left;
     }
 
+    .App-pageerror-error {
+        color: $PrimColor;
+        font-size: 96px;
+        font-weight: 700;
+        margin: 0;
+    }
+
+    .App-copyright{
+        font-size: 12px;
+    }
 
 }
