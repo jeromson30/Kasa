@@ -1,0 +1,68 @@
+
+.App-gallery {
+    width: $PrimWidth;
+    max-width: 1240px;
+    height: 820px;
+    display: grid;
+    grid-template-columns: 360px 360px 360px;
+    grid-row: 2;
+    grid-gap: 30px;
+    box-sizing: border-box;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    padding: 20px;
+    background-color: #F6F6F6;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .App-gallery a {
+    width: $PrimWidth;
+    height: 100%;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: bold;
+    text-shadow: #000;
+  }
+  
+  .slideshow-container {
+    position: relative;
+    width: $PrimWidth;
+    height: 415px;
+    overflow: hidden;
+  }
+  
+  .App-slide {
+    width: $PrimWidth;
+    height: 415px;
+    position: absolute;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.5s ease;
+    border-radius: 20px;
+    opacity: 0;
+  }
+  
+  .App-slide.active {
+    opacity: 1;
+  }
+  
+  .App-slide-leftarrow {
+    cursor: pointer;
+    position: absolute;
+    top:calc(50% - 60px);
+    left:2%;
+    color: white;
+    background: none;
+    border: none;
+  }
+  
+  .App-slide-rightarrow {
+    cursor: pointer;
+    position: absolute;
+    top:calc(50% - 60px);
+    right:2%;
+    color: white;
+    background: none;
+    border: none;
+  }

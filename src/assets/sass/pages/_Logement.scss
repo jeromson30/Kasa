@@ -1,0 +1,66 @@
+
+.App-logement{
+    display: flex;
+    flex-direction: column;
+    width: $PrimWidth;
+    text-align: left;
+    position: relative;
+  }
+  
+  .App-logement-host {
+    width: 180px;
+    box-sizing: border-box;
+    position: absolute;
+    @include flexBox(column,center,space-around);
+    top: 20px;
+    right: 20px;
+    text-align: right;
+    color: $PrimColor;
+    font-size: 18px;
+    font-weight: 500;
+    > div {
+      width: $PrimWidth;
+      padding: 10px;
+    }
+  }
+  
+  .App-logement-title{
+    color:$PrimColor;
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 0;
+  }
+  
+  .App-logement-location {
+    color:black;
+    font-size: 18px;
+    line-height: 26px;
+  }
+  
+  .App-logement-host img {
+    width: 64px;
+    height: 64px;
+    object-fit: contain;
+    border-radius: 50%;
+  }
+  
+  .App-logement-tag {
+    background-color: $PrimColor;
+    font-weight: 700;
+    font-size: 14px;
+    color:white;
+    border-radius: 10px;
+    padding: 5px 8px 5px 8px;
+    margin-right: 8px;
+  }
+  
+  .App-logement-collapse {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  
+  .App-logement-collapse h3{
+    font-size: 18px;
+  }
