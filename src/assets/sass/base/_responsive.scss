@@ -43,13 +43,15 @@
     }
 
     .App-gallery {
-        height: auto;
-        display: flex;
+        height: 1030px;
+        display: grid;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        grid-template-columns: none;
-        grid-row: none;
+        grid-template-columns: 360px;
+        grid-row: 2;
+        grid-gap: 10px;
+        overflow: hidden;
         padding: 0;
         background-color: transparent;
         & a {
