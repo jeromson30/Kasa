@@ -458,15 +458,17 @@ li {
     transform: none;
   }
   .App-gallery {
-    height: 1030px;
-    display: grid;
+    width: 100%;
+    height: 1110px;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: column;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33.3333%;
     align-items: center;
     justify-content: center;
-    grid-template-columns: 360px;
-    grid-row: 2;
     grid-gap: 10px;
-    overflow: hidden;
     padding: 0;
     background-color: transparent;
   }
@@ -474,8 +476,10 @@ li {
     width: 100%;
   }
   .App-banner {
+    width: 89%;
     font-size: 24px;
     font-weight: 700;
+    padding: 20px;
   }
   header,
   main,
