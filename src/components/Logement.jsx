@@ -8,7 +8,7 @@ import PropTypes from 'prop-types'
 function Logement(props) {
     let tags
     let listEquipments
-    // Nous recupérons la props data qui contient tous les resultats de la page logement.
+    // Nous recupérons la props data qui contient tous les informations du logement.
     let data = props.data
 
     // Création de la liste des équipements
@@ -55,7 +55,7 @@ function Logement(props) {
                     {/* Chargement de la section contenant les composants collapses pour la description et la liste des equipements*/}
                     <section className='App-logement-collapse'>
                             <Collapse collapseTitle='Description' collapseWidth='47%' collapseText={data.description}/>
-                            <Collapse collapseTitle='Equipements' collapseWidth='47%' IsList='True' collapseText={listEquipments}/>                        
+                            <Collapse collapseTitle='Equipements' collapseWidth='47%' IsList={true} collapseText={listEquipments}/>                        
                     </section>
                 </article>
         </main>

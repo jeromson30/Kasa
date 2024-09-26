@@ -27,7 +27,6 @@ function Collapse(props) {
 
 Collapse.propTypes = {
     collapseWidth: PropTypes.string,
-    collapseText: PropTypes.string,
     collapseTitle: PropTypes.string,
     collapseTitleSize: PropTypes.string,
     IsList: PropTypes.bool

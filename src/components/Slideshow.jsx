@@ -48,7 +48,7 @@ function Slideshow(props){
 }
 
 Slideshow.propTypes = {
-    pictures: PropTypes.string
+    pictures: PropTypes.array
 }
 
 export default Slideshow

@@ -1,8 +1,10 @@
 import Card from './Cards'
 import dataLogements from '../logements.json'
-// import GetData from "../modules/getData";
 
 function Gallery(){    
+
+    // J'aurai pu utiliser la fonction map() dans un useEffect également
+    
     return (
         <section className="App-gallery">
                 {dataLogements.map(({title, cover, id}) => (
