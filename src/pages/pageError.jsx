@@ -5,11 +5,12 @@ import RouteError from "../modules/routeError";
 
 
 function PageError() {
-    
     return (
         <div className="App">
-            <Header/>
-            <RouteError />
+            <div className="App-container">
+                <Header/>
+                <RouteError />
+            </div>
             <Footer />
         </div>
     )

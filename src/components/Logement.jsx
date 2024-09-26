@@ -42,16 +42,19 @@ function Logement(props) {
                             {tags}
                     </section>
                     <div className='App-logement-host'>
-                        <div style={{display:'flex',height: '64px',alignItems: 'center'}}><span style={{fontSize: '20px',lineHeight: '25px', padding: '10px'}}>{data.host.name}</span><img src={data.host.picture} alt={data.host.name}/></div>
-                        {/* Système de notation avec les étoiles */}
-                        <div className='App-logement-host-rating'>
-                        {[1, 2, 3, 4, 5].map((star, index) => {
-                                return (  
-                                    <FontAwesomeIcon key={index} icon={faStar} size='lg' style={{marginRight: '5px',color: star <= Number(data.rating) ? '#FF6060' : 'lightgrey'}}/>
-                                )
-                            })}
+                        <div className="App-logement-host-container">
+                            <span className='App-logement-host-name'>{data.host.name}</span>
+                            <img src={data.host.picture} alt={data.host.name}/>
                         </div>
-                </div>
+                        {/* Système de notation avec les étoiles */}
+                            <div className='App-logement-host-rating'>
+                            {[1, 2, 3, 4, 5].map((star, index) => {
+                                    return (  
+                                        <FontAwesomeIcon key={index} icon={faStar} size='lg' className={star <= Number(data.rating) ? 'App-logement-star' : 'App-logement-starinactive'}/>
+                                    )
+                                })}
+                            </div>
+                    </div>
                     {/* Chargement de la section contenant les composants collapses pour la description et la liste des equipements*/}
                     <section className='App-logement-collapse'>
                             <Collapse collapseTitle='Description' collapseWidth='47%' collapseText={data.description}/>

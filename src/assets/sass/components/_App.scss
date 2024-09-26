@@ -2,11 +2,12 @@
 
 .App {
   width: $PrimWidth;
-  background-color: white;
   @include flexBox(column);
-  text-align: center;
 }
-
+.App-container {
+    width: 86.2%;
+    max-width: 1240px;
+}
 .App-logo {
   width: 210px;
   height: 68px;
@@ -14,30 +15,24 @@
 }
 
 .App-header {
-  width: $PrimWidth;
-  max-width: 1240px;
-  margin-top: 20px;
+  width: 100%;
   display: flex;
-  flex-direction: row;
   font-size: 18px;
   color: $PrimColor;
-  position: relative;
+  align-items: center;
 }
 
 .App-navigation {
-  position: absolute;
-  right: 0;
-  width: 23%;
-  text-align: right;
-  justify-content: right;
+  display: flex;
+  width: 100%;
+  justify-content: end;
   font-size: 24px;
   color: #000;
 }
 
 .App-navigation ul{
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  gap: 57px;
 }
 
 .App-link-home, .App-link-about{

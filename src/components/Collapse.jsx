@@ -19,7 +19,7 @@ function Collapse(props) {
                     <button className={buttonAction ? "App-collapse-button" : "App-collapse-button collapse-active"} onClick={()=>buttonAction ? setActif(false) : setActif(true)}><FontAwesomeIcon icon={faChevronDown} size="2xl" /></button>
                 </div>
                 <div className={buttonAction ? "App-collapse-text open" : "App-collapse-text"}>
-                {IsList ? <ul style={{padding:0,margin:0}}>{collapseText}</ul> : collapseText}
+                {IsList ? <ul>{collapseText}</ul> : collapseText}
                 </div>
             </article>
     )

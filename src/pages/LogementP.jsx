@@ -1,3 +1,5 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import dataLogements from '../logements.json'
 import {useParams, useNavigate} from 'react-router-dom'
 import {useState, useEffect} from 'react'
@@ -32,9 +34,24 @@ function LogementPage() {
 
     // Si logement n'est pas définie on retourne une div avec 'Veuillez patienter' pour eviter une erreur avant que le render soit à nouveau executé au changement d'état de logement.
     if (!logement) {
-        return <div>Veuillez patienter...</div>
+        return(
+        <div className="App">
+            <div className="App-container">
+                <Header/>
+                <main>
+                    <p>Veuillez patienter...</p>
+                </main>
+            </div>
+            <Footer />
+        </div>)
     }
     
-    return( <Logement data={logement} />)
+    return(<div className="App">
+            <div className="App-container">
+                <Header/>
+                <Logement data={logement} />
+            </div>
+            <Footer />
+        </div>)
 }
   export default LogementPage

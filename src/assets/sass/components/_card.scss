@@ -1,10 +1,10 @@
 .App-card {
     width: 340px;
     height: 340px;
-    box-sizing: border-box;
     background-color: $PrimColor;
     border-radius: 10px;
     transition: transform 200ms;
+    object-fit: contain;
     &:hover {
       transform: scale(1.1);
     }

@@ -64,3 +64,25 @@
   .App-logement-collapse h3{
     font-size: 18px;
   }
+
+  .App-logement-star {
+    color: #FF6060;
+  }
+
+  .App-logement-starinactive {
+    color: lightgrey;
+  }
+
+  .App-logement-host-container {
+    display:flex;
+    height: 64px;
+    align-items: center;
+  }
+
+  .App-logement-host-name {
+    font-size: 20px;
+    line-height: 25px;
+    padding: 10px;
+  }
+
+  

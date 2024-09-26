@@ -1,33 +1,32 @@
 import { createBrowserRouter} from "react-router-dom";
 import LogementPage from '../pages/LogementP';
-import Header from '../components/Header';
+
 import Home from '../pages/Home';
 import About from '../pages/About';
-import Footer from '../components/Footer';
+
 import PageError from '../pages/pageError';
-import RouteError from "./routeError";
 
 const router = createBrowserRouter([
     {
       path: "/",
-      element:     <div className="App"><Header/><Home/><Footer/></div>,
-      errorElement: <div className="App"><Header/><RouteError/><Footer/></div>
+      element:  <Home />,
+      errorElement: <PageError />
     },
     {
       path: "/A-propos",
-      element:     <div className="App"><Header/><About/><Footer/></div>,
-      errorElement: <div className="App"><Header/><RouteError/><Footer/></div>
+      element:     < About />,
+      errorElement: <PageError />
     },
     {
       name: "logement",
       path: "/logement/:logementId",
-      element:     <div className="App"><Header/><LogementPage/><Footer/></div>,
-      errorElement: <div className="App"><Header/><RouteError/><Footer/></div>
+      element:     <LogementPage/>,
+      errorElement: <PageError />
     },
     {
       name: "pageError",
       path: "/error",
-      element:     <PageError />
+      element: <PageError />
     },
   ]);
   

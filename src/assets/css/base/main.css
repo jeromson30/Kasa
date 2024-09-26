@@ -44,12 +44,17 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: black;
+  background-color: white;
 }
 
 #root {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   max-width: 1440px;
+  padding-top: 45px;
+  gap: 50px;
 }
 
 code {
@@ -73,8 +78,7 @@ footer {
   justify-content: center;
   align-items: center;
   width: 100%;
-  padding-top: 20px;
-  padding-bottom: 20px;
+  padding-top: 40px;
   background-color: black;
   color: white;
 }
@@ -95,12 +99,15 @@ li {
 
 .App {
   width: 100%;
-  background-color: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
+}
+
+.App-container {
+  width: 86.2%;
+  max-width: 1240px;
 }
 
 .App-logo {
@@ -111,29 +118,23 @@ li {
 
 .App-header {
   width: 100%;
-  max-width: 1240px;
-  margin-top: 20px;
   display: flex;
-  flex-direction: row;
   font-size: 18px;
   color: #FF6060;
-  position: relative;
+  align-items: center;
 }
 
 .App-navigation {
-  position: absolute;
-  right: 0;
-  width: 23%;
-  text-align: right;
-  justify-content: right;
+  display: flex;
+  width: 100%;
+  justify-content: end;
   font-size: 24px;
   color: #000;
 }
 
 .App-navigation ul {
   display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  gap: 57px;
 }
 
 .App-link-home, .App-link-about {
@@ -170,6 +171,7 @@ li {
   box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   align-content: center;
+  text-align: center;
   font-size: 48px;
   font-weight: bold;
   color: #fff;
@@ -179,10 +181,10 @@ li {
 .App-card {
   width: 340px;
   height: 340px;
-  box-sizing: border-box;
   background-color: #FF6060;
   border-radius: 10px;
   transition: transform 200ms;
+  object-fit: contain;
 }
 .App-card:hover {
   transform: scale(1.1);
@@ -199,6 +201,14 @@ li {
   font-size: 16px;
   font-weight: 700;
   overflow: hidden;
+}
+
+.App-collapse-container {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-items: center;
 }
 
 .App-collapse {
@@ -247,6 +257,10 @@ li {
   transition: all 200ms ease-out;
   color: black;
   text-align: left;
+}
+.App-collapse-text ul {
+  padding: 0;
+  margin: 0;
 }
 
 .open {
@@ -323,6 +337,10 @@ li {
   color: white;
   background: none;
   border: none;
+}
+
+#arrow {
+  font-size: 80px;
 }
 
 .App-pageerror-error {
@@ -418,16 +436,34 @@ li {
   font-size: 18px;
 }
 
+.App-logement-star {
+  color: #FF6060;
+}
+
+.App-logement-starinactive {
+  color: lightgrey;
+}
+
+.App-logement-host-container {
+  display: flex;
+  height: 64px;
+  align-items: center;
+}
+
+.App-logement-host-name {
+  font-size: 20px;
+  line-height: 25px;
+  padding: 10px;
+}
+
 /****** Media queries ***********/
 /* Small devices (phones, less than 768px) */
 @media (max-width: 767px) {
   body {
     font-size: 14px;
   }
-  .App {
+  .App-header {
     width: 100%;
-    margin-left: 10px;
-    margin-right: 10px;
   }
   .App-logo {
     width: 140px;
@@ -435,18 +471,16 @@ li {
     pointer-events: none;
   }
   .App-navigation {
-    position: absolute;
-    right: 40px;
-    width: 36%;
-    height: 50px;
-    text-align: right;
-    align-content: center;
+    display: flex;
+    width: 100%;
+    height: 40px;
     font-size: 12px;
     text-transform: uppercase;
   }
   .App-navigation ul {
     width: 100%;
-    margin: 0;
+    gap: 26px;
+    justify-content: end;
     padding: 0;
   }
   .App-card {
@@ -476,16 +510,10 @@ li {
     width: 100%;
   }
   .App-banner {
-    width: 89%;
+    width: 100%;
+    box-sizing: border-box;
     font-size: 24px;
     font-weight: 700;
-    padding: 20px;
-  }
-  header,
-  main,
-  footer {
-    box-sizing: border-box;
-    padding: 20px;
   }
   .App-logement-host {
     width: 100%;
@@ -522,6 +550,29 @@ li {
   }
   .App-copyright {
     font-size: 12px;
+  }
+  .App-logement-tag {
+    font-weight: 700;
+    font-size: 12px;
+    padding: 5px 8px 5px 8px;
+    margin-right: 2px;
+  }
+  .App-logement-title {
+    font-size: 18px;
+    font-weight: 500;
+  }
+  .App-logement-location {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .App-logement-collapse h3 {
+    font-size: 13px;
+  }
+  .App-logement-host {
+    font-size: 12px;
+  }
+  #arrow {
+    font-size: 24px;
   }
 }
 

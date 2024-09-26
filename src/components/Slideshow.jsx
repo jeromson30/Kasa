@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useState } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faChevronLeft} from '@fortawesome/free-solid-svg-icons'
 import { faChevronRight} from '@fortawesome/free-solid-svg-icons'
@@ -17,16 +17,6 @@ function Slideshow(props){
         const previousIndex = (currentIndex - 1 + pictures.length) % pictures.length;
         setCurrentIndex(previousIndex);
     };
-
-    useEffect(() => {
-        if(window.innerWidth < 767){
-            
-            document.querySelectorAll('#arrow').forEach((item) => {
-                item.classList.remove("fa-6x")
-                item.classList.add("fa-2xl")
-            })
-        }
-      },[]);
 
     const Slides = pictures.map((pic, index) => 
             <div key={index} className={`App-slide ${index === currentIndex ? 'active' : ''}`} style={{ backgroundImage: `url(${pic})` }}>

@@ -1,3 +1,5 @@
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 import Banner from "../components/Banner";
 import image from "../assets/images/banner_about.webp";
 import Collapse from "../components/Collapse";
@@ -28,14 +30,21 @@ function About() {
     ];
 
     return (
-        <main>
-            <Banner imageBG={image} />
-            <div style={{marginTop: '20px',display: 'flex', flexDirection: 'column', alignItems: 'center', justifyItems: 'center'}}>
-            {aboutList.map((list, index) =>
-                <Collapse key={index} collapseTitle={list.title} collapseWidth='70%' collapseText={list.content} collapseTitleSize='24px'/>
-            )}
+        <div className="App">
+            <div className="App-container">
+                <Header/>
+                <main>
+                    <Banner imageBG={image} />
+                    <div className="App-collapse-container">
+                    {aboutList.map((list, index) =>
+                        <Collapse key={index} collapseTitle={list.title} collapseWidth='70%' collapseText={list.content} collapseTitleSize='24px'/>
+                    )}
+                    </div>
+                </main>
             </div>
-        </main>
+            <Footer/>
+        </div>
+        
     )
   }
   
